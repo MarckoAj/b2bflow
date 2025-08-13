@@ -1,5 +1,5 @@
 import os
-from src.utils.logger import log
+from utils.logger import log
 from pathlib import Path
 from dotenv import load_dotenv
 import httpx  
