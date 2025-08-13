@@ -1,4 +1,5 @@
 import os
+from src.utils.logger import log
 from pathlib import Path
 from dotenv import load_dotenv
 import httpx  
@@ -25,13 +26,13 @@ def send_message(whatsAppNumber: str, contactName: str) -> bool:
     try:
         response = httpx.post(url, json=payload,headers=headers,)
         if response.status_code == 200:
-            print(f"Mensagem enviada para {contactName} ({whatsAppNumber})")
+            log(f"Mensagem enviada para {contactName} ({whatsAppNumber})")
             return True
         else:
-            print(f"Erro ao enviar para {contactName}")
+            log(f"Erro ao enviar para {contactName}")
             return False
     except Exception as e:
-        print("Erro na requisição:", e)
+        log("Erro na requisição:", e)
         return False
 
 
