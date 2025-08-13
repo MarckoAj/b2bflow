@@ -1,6 +1,6 @@
-from src.services.supabase_service import supabase_get_contact
-from src.services.zapi_service import send_message
-from src.utils.logger import log
+from services.supabase_service import supabase_get_contact
+from services.zapi_service import send_message
+from utils.logger import log
 
 if __name__=="__main__":
  log("Iniciando envio de mensagens")

@@ -1,0 +1,4 @@
+# Dependencies (requirements.txt)
+supabase
+python-dotenv
+httpx

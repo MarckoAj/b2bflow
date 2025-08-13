@@ -1,5 +1,5 @@
 import os
-from src.utils.logger import log
+from utils.logger import log
 from dotenv import load_dotenv;
 from supabase import create_client,Client
 from pathlib import Path
